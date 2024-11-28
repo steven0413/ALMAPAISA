@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      project-id="utility-melody-441820-b6"
+      agent-id="cbb3e5e7-daa8-473b-90b4-086cec4af728"
+      language-code="es"
+      max-query-length="-1">
+      <df-messenger-chat-bubble
+       chat-title="ALMA PAISA">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        --df-messenger-font-color: #000;
+        --df-messenger-font-family: Google Sans;
+        --df-messenger-chat-background: #f3f6fc;
+        --df-messenger-message-user-background: #C6DAFC;
+        --df-messenger-message-bot-background: #fff;
+        --df-messenger-chat-border-radius: 9px;
+        --df-messenger-chat-window-height: 650px;
+        --df-messenger-titlebar-title-font-size: 19px;
+        --df-messenger-message-font-family:"Google Sans", "Helvetica Neue", sans-serif;
+        --df-messenger-chat-padding: 20px;
+        --df-messenger-chat-window-width: 410px;
+        bottom: 16px;
+        right: 16px;
+
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALMAPAISA</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="nav-left-side">
+          <svg
+            width="17"
+            height="26"
+            viewBox="0 0 17 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.309 2.90741C10.309 2.90741 4.29997 8.73841 2.526 13.9214C2.40313 14.2804 2.73267 14.6124 3.10045 14.5192L13.2394 11.9481C13.9358 11.7715 14.5723 12.3638 14.368 13.0525C12.9552 17.8149 8.62911 23.5897 8.62911 23.5897"
+              stroke="#A259FF"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <a href="/">ALMA PAISA</a>
+        </div>
+
+        <button id="open-nav-menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H15C15.4142 5.25 15.75 5.58579 15.75 6C15.75 6.41421 15.4142 6.75 15 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 18C3 17.5858 3.33579 17.25 3.75 17.25H15C15.4142 17.25 15.75 17.5858 15.75 18C15.75 18.4142 15.4142 18.75 15 18.75H3.75C3.33579 18.75 3 18.4142 3 18Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+
+        <div class="wrapper">
+          <ul>
+            <li>
+              <button id="close-nav-menu">
+                <svg
+                  width="47"
+                  height="47"
+                  viewBox="0 0 47 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.7505 11.7495L35.2505 35.2495"
+                    stroke="#A259FF"
+                    stroke-width="6"
+                  />
+                  <path
+                    d="M35.2502 11.7502L11.7502 35.2502"
+                    stroke="#A259FF"
+                    stroke-width="6"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li class="socials">
+              <p>Join our community</p>
+
+              <div>
+                <a href="#">
+                  <img
+                    src="./assets/socials/DiscordLogo.png"
+                    alt="Discord logo"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="./assets/socials/YoutubeLogo.png"
+                    alt="Youtube logo"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="./assets/socials/TwitterLogo.png"
+                    alt="Twitter logo"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="./assets/socials/InstagramLogo.png"
+                    alt="Instagram logo"
+                  />
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="container greeting-section">
+        <div class="left-side">
+          <h1 id="greeting">Bienvenidos a Medellín</h1>
+          <p id="weather"> Explora, Descubre & Disfruta </p>
+        </div>
+        <div class="right-side">
+          <p>Hora local:</p>
+          <div class="local-time">
+            <div class="time-holder">
+              <span data-time="hours" class="time-number">08</span>
+              <span class="time-letter">Hora</span>
+            </div>
+            <span class="time-divider">:</span>
+            <div class="time-holder">
+              <span data-time="minutes" class="time-number">25</span>
+              <span class="time-letter">Minutos</span>
+            </div>
+            <span class="time-divider">:</span>
+            <div class="time-holder">
+              <span data-time="seconds" class="time-number">13</span>
+              <span class="time-letter">Segundos</span>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="gallery" class="gallery-section">
+        <img src="" alt="" />
+        <div class="thumbnails">
+          <img src="./assets/gallery/medellin.jpg" alt="Thumbnail Image 1" data-array-index="0" data-selected="true">
+          <img src="./assets/gallery/image1.jpg" alt="Thumbnail Image 2" data-array-index="1" data-selected="false">
+          <img src="./assets/gallery/image2.jpg" alt="Thumbnail Image 3" data-array-index="2" data-selected="false">
+          <img src="./assets/gallery/image3.jpg" alt="Thumbnail Image 4" data-array-index="3" data-selected="false">
+          <img src="./assets/gallery/Feria.jpeg" alt="Thumbnail Image 5" data-array-index="4" data-selected="false">
+          
+        </div>
+      </section>
+
+      <section id="products" class="container products-section">
+        
+
+        <div class="products-area">
+          <div class="product-item">
+             <img src="./assets/products/Peñol.jpg" alt="AstroFiction">
+             <div class="product-details">
+                <h3 class="product-title">Piedra del Peñol</h3>
+                <p class="product-author">Guatape - Col</p>
+                <p class="price-title">Info</p>
+                <p class="product-price">El peñón de Guatapé, o piedra del Peñol, es un monolito de 220 metros de altura, localizado en el término municipal de Guatapé, Antioquia, Colombia.</p>
+             </div>
+          </div>
+          <div class="product-item">
+             <img src="./assets/products/Comuna-13.jpg" alt="Space Odissey">
+             <div class="product-details">
+                <h3 class="product-title">Comuna 13</h3>
+                <p class="product-author">San Javier - Col</p>
+                <p class="price-title">Info</p>
+                <p class="product-price">San Javier es una de las 16 comunas de la ciudad de Medellín, Colombia , con una población de alrededor de 160.000 habitantes.</p>
+             </div>
+          </div>
+          <div class="product-item">
+             <img src="./assets/products/PalaciodeCultura.png" alt="Doomed City">
+             <div class="product-details">
+                <h3 class="product-title">Palacio de la Cultura</h3>
+                <p class="product-author">Centro de Medellín</p>
+                <p class="price-title">Info</p>
+                <p class="product-price">Es uno de los edificios más bonitos que ver en Medellín y está en la Plaza Botero. Fue diseñado por un arquítecto belga con un estilo neogótico blanco y negro imponente</p>
+             </div>
+          </div>
+          
+       </div>
+
+      </section>
+
+      <section id="faqs" class="container faqs-section">
+        <h3>Preguntas frecuentes</h3>
+
+        <details open>
+          <summary>Alma Paisa</summary>
+          <p>
+            CEO Steven Rios 
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
